@@ -1,0 +1,58 @@
+<!--COMPUTER ONLY RAHMEN OBEN-->
+<div class="ui grid">
+  <div class="three wide computer three wide tablet column"></div>
+  <div class="computer only ten wide column">
+  </div>
+  <div class="computer only three wide column"></div>
+</div>
+<!--COMPUTER ONLY RAHMEN OBEN ENDE-->
+
+<!--MENUE-->
+<div class="ui grid">
+
+  <div class="three wide computer two wide tablet one wide mobile column"></div>
+  <div class="ten wide computer twelve wide tablet fourteen wide mobile column">
+    <div class="ui pointing menu">
+      <a class="item" routerLink="home">
+        <i class="home icon"></i>
+        <p class="computer only">Startseite</p>
+      </a>
+      <a class="item" routerLink="fragen">
+        <i class="list icon"></i> Fragen
+      </a>
+      <a class="item" routerLink="about">
+        <i class="info icon"></i> Informationen
+      </a>
+      <div class="right menu">
+        <div class="item">
+          <div class="list icon">
+            <i class="bolt red icon"></i>zapp!
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="three wide computer two wide tablet one wide mobile column"></div>
+ 
+</div>
+<!--MENUE-->
+
+
+<div class="ui grid">
+
+  <div class="three wide computer two wide tablet one wide mobile column"></div>
+
+  <div class="ten wide computer twelve wide tablet fourteen wide mobile column">
+    <div id="paddingbody">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  
+  <div class="three wide computer two wide tablet one wide mobile column"></div>
+
+</div>
+
+<!--FOOTER-FIX-->
+<div id="footerfest">
+  <h5><i class=" bolt red icon"></i>zapp! v1.4 (c)2019</h5>
+</div>

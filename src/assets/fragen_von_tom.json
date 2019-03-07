@@ -1,0 +1,1046 @@
+[
+  {
+    "id": 1,
+    "fragentext": "Which of the following information is stored within the BIOS? (Choose TWO correct answers.)",
+    "hinweis": "System Architecture",
+    "antwort": [
+      { "id": 1, "antworttext": "Boot device order", "pruefung": true},
+      { "id": 2, "antworttext": "Linux kernel version", "pruefung": false},
+      { "id": 3, "antworttext": "Timezone", "pruefung": false},
+      { "id": 4, "antworttext": "Hardware configuration", "pruefung": true},
+      { "id": 5, "antworttext": "The system's hostname", "pruefung": false}
+    ],
+    "typ": "mc"
+  },
+  {
+    "id": 2,
+    "fragentext": "Which of the following commands reboots the system when using SysV init? (Choose TWO correct answers.)",
+    "hinweis": "System Architecture",
+    "antwort": [
+      { "id": 1, "antworttext": "shutdown -r now", "pruefung": true},
+      { "id": 2, "antworttext": "shutdown -r \"rebooting\"", "pruefung": false},
+      { "id": 3, "antworttext": "telinit 6", "pruefung": true},
+      { "id": 4, "antworttext": "telinit 0", "pruefung": false},
+      { "id": 5, "antworttext": "shutdown -k now \"rebooting\"", "pruefung": false}
+    ],
+    "typ": "mc"
+  },
+  {
+    "id": 3,
+    "fragentext": "Which of the following are init systems used within Linux systems? (Choose THREE correct answers.)",
+    "hinweis": "System Architecture",
+    "antwort": [
+      { "id": 1, "antworttext": "startd", "pruefung": false},
+      { "id": 2, "antworttext": "systemd", "pruefung": true},
+      { "id": 3, "antworttext": "Upstart", "pruefung": true},
+      { "id": 4, "antworttext": "SysInit", "pruefung": false},
+      { "id": 5, "antworttext": "SysV init", "pruefung": true}
+    ],
+    "typ": "mc"
+  },
+  {
+    "id": 4,
+    "fragentext": "Which file in the /proc filesystem lists parameters passed from the bootloader to the kernel? (Specify the file name only without any path.)",
+    "hinweis": "System Architecture",
+    "antwort": [
+      { "id": 1, "antworttext": "cmdline", "pruefung": true },
+      { "id": 2, "antworttext": "/proc/cmdline", "pruefung": true }
+    ],
+    "typ": "fi"
+  },
+  {
+    "id": 5,
+    "fragentext": "What information can the lspci command display about the system hardware? (Choose THREE correct answers.)",
+    "hinweis": "System Architecture",
+    "antwort": [
+      { "id": 1, "antworttext": "Device IRQ settings", "pruefung": true},
+      { "id": 2, "antworttext": "PCI bus speed", "pruefung": true},
+      { "id": 3, "antworttext": "System battery type", "pruefung": false},
+      { "id": 4, "antworttext": "Device vendor identification", "pruefung": true},
+      { "id": 5, "antworttext": "Ethernet MAC address", "pruefung": false}
+    ],
+    "typ": "mc"
+  },
+  {
+    "id": 6,
+    "fragentext": "Which of the following commands brings a system running SysV init into a state in which it is safe to perform maintenance tasks? (Choose TWO correct answers.)",
+    "hinweis": "System Architecture",
+    "antwort": [
+      { "id": 1, "antworttext": "shutdown -R 1 now", "pruefung": false},
+      { "id": 2, "antworttext": "shutdown -single now", "pruefung": false},
+      { "id": 3, "antworttext": "init 1", "pruefung": true},
+      { "id": 4, "antworttext": "telinit 1", "pruefung": true},
+      { "id": 5, "antworttext": "runlevel 1", "pruefung": false}
+    ],
+    "typ": "mc"
+  },
+  {
+    "id": 7,
+    "fragentext": "What is the first program that is usually started, at boot time, by the Linux kernel when using SysV init?",
+    "hinweis": "System Architecture",
+    "antwort": [
+      { "id": 1, "antworttext": "/lib/init.so", "pruefung": false},
+      { "id": 2, "antworttext": "/sbin/init", "pruefung": true},
+      { "id": 3, "antworttext": "/etc/rc.d/rcinit", "pruefung": false},
+      { "id": 4, "antworttext": "/proc/sys/kernel/init", "pruefung": false},
+      { "id": 5, "antworttext": "/boot/init", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 8,
+    "fragentext": "Which command will display messages from the kernel that were output during the normal boot sequence?",
+    "hinweis": "System Architecture",
+    "antwort": [
+      { "id": 1, "antworttext": "dmesg", "pruefung": true },
+      { "id": 2, "antworttext": "/bin/dmesg", "pruefung": true }
+    ],
+    "typ": "fi"
+  },
+  {
+    "id": 9,
+    "fragentext": "Which of the following commands will write a message to the terminals of all logged in users?",
+    "hinweis": "System Architecture",
+    "antwort": [
+      { "id": 1, "antworttext": "bcast", "pruefung": false},
+      { "id": 2, "antworttext": "mesg", "pruefung": false},
+      { "id": 3, "antworttext": "print", "pruefung": false},
+      { "id": 4, "antworttext": "wall", "pruefung": true},
+      { "id": 5, "antworttext": "yell", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 10,
+    "fragentext": "Which of the following kernel parameters instructs the kernel to suppress most boot messages?",
+    "hinweis": "System Architecture",
+    "antwort": [
+      { "id": 1, "antworttext": "silent", "pruefung": false},
+      { "id": 2, "antworttext": "verbose=0", "pruefung": false},
+      { "id": 3, "antworttext": "nomesg", "pruefung": false},
+      { "id": 4, "antworttext": "quiet", "pruefung": true}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 11,
+    "fragentext": "Which of the following options for the kernel's command line changes the systemd boot target to rescue.target instead of the default target?",
+    "hinweis": "System Architecture",
+    "antwort": [
+      { "id": 1, "antworttext": "systemd.target=rescue.target", "pruefung": false},
+      { "id": 2, "antworttext": "systemd.runlevel=rescue.target", "pruefung": false},
+      { "id": 3, "antworttext": "systemd.service=rescue.target", "pruefung": false},
+      { "id": 4, "antworttext": "systemd.default=rescue.target", "pruefung": false},
+      { "id": 5, "antworttext": "systemd.unit=rescue.target", "pruefung": true}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 12,
+    "fragentext": "After modifying GNU GRUB's configuration file, which command must be run for the changes to take effect?",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "kill -HUP $(pidof grub)", "pruefung": false},
+      { "id": 2, "antworttext": "grub-install", "pruefung": false},
+      { "id": 3, "antworttext": "grub", "pruefung": false},
+      { "id": 4, "antworttext": "No action is required", "pruefung": true}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 13,
+    "fragentext": "Which of the following commands is used to update the list of available packages when using dpkg based package management?",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "apt-get update", "pruefung": true},
+      { "id": 2, "antworttext": "apt-get upgrade", "pruefung": false},
+      { "id": 3, "antworttext": "apt-cache update", "pruefung": false},
+      { "id": 4, "antworttext": "apt-get refresh", "pruefung": false},
+      { "id": 5, "antworttext": "apt-cache upgrade", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 14,
+    "fragentext": "Which of the following commands lists the dependencies of a given dpkg package?",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "apt-cache depends-on package", "pruefung": false},
+      { "id": 2, "antworttext": "apt-cache dependencies package", "pruefung": false},
+      { "id": 3, "antworttext": "apt-cache depends package", "pruefung": true},
+      { "id": 4, "antworttext": "apt-cache requires package", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 15,
+    "fragentext": "Which of the following options is used in a GRUB Legacy configuration file to define the amount of time that the GRUB menu will be shown to the user?",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "hidemenu", "pruefung": false},
+      { "id": 2, "antworttext": "splash", "pruefung": false},
+      { "id": 3, "antworttext": "timeout", "pruefung": true},
+      { "id": 4, "antworttext": "showmenu", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 16,
+    "fragentext": "What can the Logical Volume Manager (LVM) be used for? (Choose THREE correct answers.)",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "To create RAID 9 arrays.", "pruefung": false},
+      { "id": 2, "antworttext": "To dynamically change the size of logical volumes.", "pruefung": true},
+      { "id": 3, "antworttext": "To encrypt logical volumes.", "pruefung": false},
+      { "id": 4, "antworttext": "To create snapshots.", "pruefung": true},
+      { "id": 5, "antworttext": "To dynamically create or delete logical volumes.", "pruefung": true}
+    ],
+    "typ": "mc"
+  },
+  {
+    "id": 17,
+    "fragentext": "Which of the following commands updates the linker cache of shared libraries?",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "mkcache", "pruefung": false},
+      { "id": 2, "antworttext": "soconfig", "pruefung": false},
+      { "id": 3, "antworttext": "mkldconfig", "pruefung": false},
+      { "id": 4, "antworttext": "lddconfig", "pruefung": false},
+      { "id": 5, "antworttext": "ldconfig", "pruefung": true}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 18,
+    "fragentext": "Which of the following commands lists all currently installed packages when using RPM package management?",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "yum --query --all", "pruefung": false},
+      { "id": 2, "antworttext": "yum --list --installed", "pruefung": false},
+      { "id": 3, "antworttext": "rpm --query --all", "pruefung": true},
+      { "id": 4, "antworttext": "rpm --list installed", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 19,
+    "fragentext": "Which of the following commands can be used to download the RPM package kernel without installing it?",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "yum download --no-install kernel", "pruefung": false},
+      { "id": 2, "antworttext": "yumdownloader kernel", "pruefung": true},
+      { "id": 3, "antworttext": "rpm --download --package kernel", "pruefung": false},
+      { "id": 4, "antworttext": "rpmdownload kernel", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 20,
+    "fragentext": "When using rpm --verify to check files created during the installation of RPM packages, which of the following information is taken into consideration? (Choose THREE correct answers.)",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "Timestamps", "pruefung": true},
+      { "id": 2, "antworttext": "MD5 checksums", "pruefung": true},
+      { "id": 3, "antworttext": "Inodes", "pruefung": false},
+      { "id": 4, "antworttext": "File sizes", "pruefung": true},
+      { "id": 5, "antworttext": "GnuPG signatures", "pruefung": false}
+    ],
+    "typ": "mc"
+  },
+  {
+    "id": 21,
+    "fragentext": "Which RPM command will output the name of the package which supplied the file /etc/exports?",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "rpm -F /etc/exports", "pruefung": false},
+      { "id": 2, "antworttext": "rpm -qf /etc/exports", "pruefung": true},
+      { "id": 3, "antworttext": "rpm -Kl /etc/exports", "pruefung": false},
+      { "id": 4, "antworttext": "rpm -qp /etc/exports", "pruefung": false},
+      { "id": 5, "antworttext": "rpm -qi /etc/exports", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 22,
+    "fragentext": "In which directory must definition files be placed to add additional repositories to yum?",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "/etc/yum.repos.d", "pruefung": true },
+      { "id": 2, "antworttext": "/etc/yum.repos.d/", "pruefung": true },
+      { "id": 3, "antworttext": "yum.repos.d", "pruefung": true },
+      { "id": 4, "antworttext": "yum.repos.d/", "pruefung": true }
+    ],
+    "typ": "fi"
+  },
+  {
+    "id": 23,
+    "fragentext": "What is the name of the main configuration file for GNU GRUB? (Specify the file name only without any path.)",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "menu.lst", "pruefung": true },
+      { "id": 2, "antworttext": "grub.conf", "pruefung": true },
+      { "id": 3, "antworttext": "grub.cfg", "pruefung": true }
+    ],
+    "typ": "fi"
+  },
+  {
+    "id": 24,
+    "fragentext": "When removing a package, which of the following dpkg options will completely remove the files including configuration files?",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "--clean", "pruefung": false},
+      { "id": 2, "antworttext": "--delete", "pruefung": false},
+      { "id": 3, "antworttext": "--purge", "pruefung": true},
+      { "id": 4, "antworttext": "remove", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 25,
+    "fragentext": "Which file should be edited to select the network locations from which Debian installation package files are loaded?",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "/etc/dpkg/dpkg.cfg", "pruefung": false},
+      { "id": 2, "antworttext": "/etc/apt/apt.conf", "pruefung": false},
+      { "id": 3, "antworttext": "/etc/apt/apt.conf.d", "pruefung": false},
+      { "id": 4, "antworttext": "/etc/apt/sources.list", "pruefung": true},
+      { "id": 5, "antworttext": "/etc/dpkg/dselect.cfg", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 26,
+    "fragentext": "Which option to the yum command will update the entire system? (Specify ONLY the option name without any additional parameters.)",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "update", "pruefung": true }
+    ],
+    "typ": "fi"
+  },
+  {
+    "id": 27,
+    "fragentext": "Which command will disable swapping on a device? (Specify ONLY the command without any path or parameters.)",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "swapoff", "pruefung": true },
+      { "id": 2, "antworttext": "/sbin/swapoff", "pruefung": true }
+    ],
+    "typ": "fi"
+  },
+  {
+    "id": 28,
+    "fragentext": "Which Debian package management tool asks the configuration questions for a specific already installed package just as if the package were being installed for the first time? (Specify ONLY the command without any path or parameters.)",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "dpkg-reconfigure", "pruefung": true }
+    ],
+    "typ": "fi"
+  },
+  {
+    "id": 29,
+    "fragentext": "Which of the following commands overwrites the bootloader located on /dev/sda without overwriting the partition table or any data following it?",
+    "hinweis": "Linux Installation and Package Management",
+    "antwort": [
+      { "id": 1, "antworttext": "dd if=/dev/zero of=/dev/sda bs=512", "pruefung": false},
+      { "id": 2, "antworttext": "dd if=/dev/zero of=/dev/sda bs=512 count=1", "pruefung": false},
+      { "id": 3, "antworttext": "dd if=/dev/zero of=/dev/sda bs=440 count=1", "pruefung": true},
+      { "id": 4, "antworttext": "dd if=/dev/zero of=/dev/sda bs=440", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 30,
+    "fragentext": "Which of the following commands can be used to create a USB storage media from a disk image?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "gdisk", "pruefung": false},
+      { "id": 2, "antworttext": "dd", "pruefung": true},
+      { "id": 3, "antworttext": "cc", "pruefung": false},
+      { "id": 4, "antworttext": "fdisk", "pruefung": false},
+      { "id": 5, "antworttext": "mount", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 31,
+    "fragentext": "In Bash, inserting 1>&2 after a command redirects",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "standard error to standard input.", "pruefung": false},
+      { "id": 2, "antworttext": "standard input to standard error.", "pruefung": false},
+      { "id": 3, "antworttext": "standard output to standard error.", "pruefung": true},
+      { "id": 4, "antworttext": "standard error to standard output.", "pruefung": false},
+      { "id": 5, "antworttext": "standard output to standard input.", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 32,
+    "fragentext": "What command will generate a list of user names from /etc/passwd along with their login shell?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "column -s : 1,7 /etc/passwd", "pruefung": false},
+      { "id": 2, "antworttext": "chop -c 1,7 /etc/passwd", "pruefung": false},
+      { "id": 3, "antworttext": "colrm 1,7 /etc/passwd", "pruefung": false},
+      { "id": 4, "antworttext": "cut -d: -f1,7 /etc/passwd", "pruefung": true}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 33,
+    "fragentext": "In a nested directory structure, which find command line option would be used to restrict the command to searching down a particular number of subdirectories?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "-dirmax", "pruefung": false},
+      { "id": 2, "antworttext": "-maxdepth", "pruefung": true},
+      { "id": 3, "antworttext": "-maxlevels", "pruefung": false},
+      { "id": 4, "antworttext": "-n", "pruefung": false},
+      { "id": 5, "antworttext": "-s", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 34,
+    "fragentext": "Which of the following statements is correct regarding the command foo 1> bar?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "The stdout from the command foo is appended to the file bar.", "pruefung": false},
+      { "id": 2, "antworttext": "The stdout from the command foo overwrites the file bar.", "pruefung": true},
+      { "id": 3, "antworttext": "The command foo receives its stdin from the file bar.", "pruefung": false},
+      { "id": 4, "antworttext": "The command foo receives its stdin from the stdout of the command bar.", "pruefung": false},
+      { "id": 5, "antworttext": "The stderr from the command foo is saved to the file bar.", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 35,
+    "fragentext": "Which of the following commands kills the process with the PID 123 but allows the process to \"clean up\" before exiting?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "kill -PIPE 123", "pruefung": false},
+      { "id": 2, "antworttext": "kill -KILL 123", "pruefung": false},
+      { "id": 3, "antworttext": "kill -STOP 123", "pruefung": false},
+      { "id": 4, "antworttext": "kill -TERM 123", "pruefung": true}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 36,
+    "fragentext": "Which signal is missing from the following command that is commonly used to instruct a daemon to reinitialize itself, including reading configuration files? killall -s _______ daemon",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "HUP", "pruefung": true },
+      { "id": 2, "antworttext": "SIGHUP", "pruefung": true },
+      { "id": 3, "antworttext": "1", "pruefung": true }
+    ],
+    "typ": "fi"
+  },
+  {
+    "id": 37,
+    "fragentext": "What is the maximum niceness value that a regular user can assign to a process with the nice command when executing a new process?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "9", "pruefung": false},
+      { "id": 2, "antworttext": "19", "pruefung": true},
+      { "id": 3, "antworttext": "49", "pruefung": false},
+      { "id": 4, "antworttext": "99", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 38,
+    "fragentext": "Immediately after deleting 3 lines of text in vi and moving the cursor to a different line, which single character command will insert the deleted content below the current line?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "i (lowercase)", "pruefung": false},
+      { "id": 2, "antworttext": "P (uppercase)", "pruefung": false},
+      { "id": 3, "antworttext": "p (lowercase)", "pruefung": true},
+      { "id": 4, "antworttext": "U (uppercase)", "pruefung": false},
+      { "id": 5, "antworttext": "u (lowercase)", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 39,
+    "fragentext": "A user accidentally created the subdirectory \\dir in his home directory. Which of the following commands will remove that directory?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "rmdir '~/\\dir'", "pruefung": false},
+      { "id": 2, "antworttext": "rmdir \"~/\\dir\"", "pruefung": false},
+      { "id": 3, "antworttext": "rmdir ~/'\\dir'", "pruefung": false},
+      { "id": 4, "antworttext": "rmdir ~/\\dir", "pruefung": false},
+      { "id": 5, "antworttext": "rmdir ~/\\dir", "pruefung": true}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 40,
+    "fragentext": "In compliance with the FHS, in which of the directories are man pages found?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "/usr/share/man", "pruefung": true},
+      { "id": 2, "antworttext": "/opt/man", "pruefung": false},
+      { "id": 3, "antworttext": "/usr/doc/", "pruefung": false},
+      { "id": 4, "antworttext": "/var/pkg/man", "pruefung": false},
+      { "id": 5, "antworttext": "/var/man", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 41,
+    "fragentext": "Which of the following commands will send output from the program myapp to both standard output (stdout) and the file file1.log?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "cat < myapp | cat > file1.log", "pruefung": false},
+      { "id": 2, "antworttext": "myapp 0>&1 | cat > file1.log", "pruefung": false},
+      { "id": 3, "antworttext": "myapp | cat > file1.log", "pruefung": false},
+      { "id": 4, "antworttext": "myapp | tee file1.log", "pruefung": true},
+      { "id": 5, "antworttext": "tee myapp file1.log", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 42,
+    "fragentext": "What is the purpose of the Bash built-in export command?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "It allows disks to be mounted remotely.", "pruefung": false},
+      { "id": 2, "antworttext": "It runs a command as a process in a subshell.", "pruefung": false},
+      { "id": 3, "antworttext": "It makes the command history available to subshells.", "pruefung": false},
+      { "id": 4, "antworttext": "It sets up environment variables for applications.", "pruefung": true},
+      { "id": 5, "antworttext": "It shares NFS partitions for use by other systems on the network.", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 43,
+    "fragentext": "What is the output of the following command? echo \"Hello World\" | tr -d aieou",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "Hello World", "pruefung": false},
+      { "id": 2, "antworttext": "eoo", "pruefung": false},
+      { "id": 3, "antworttext": "Hll Wrld", "pruefung": true},
+      { "id": 4, "antworttext": "eoo Hll Wrld", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 44,
+    "fragentext": "Which of the following characters can be combined with a separator string in order to read from the current input source until the separator string, which is on a separate line and without any trailing spaces, is reached?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "<<", "pruefung": true},
+      { "id": 2, "antworttext": "<|", "pruefung": false},
+      { "id": 3, "antworttext": "!<", "pruefung": false},
+      { "id": 4, "antworttext": "&<", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 45,
+    "fragentext": "In the vi editor, how can commands such as moving the cursor or copying lines into the buffer be issued multiple times or applied to multiple rows?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "By using the command :repeat followed by the number and the command.", "pruefung": false},
+      { "id": 2, "antworttext": "By specifying the number right in front of a command such as 4l or 2yj.", "pruefung": true},
+      { "id": 3, "antworttext": "By selecting all affected lines using the shift and cursor keys before applying the command.", "pruefung": false},
+      { "id": 4, "antworttext": "By issuing a command such as :set repetition=4 which repeats every subsequent command 4 times.", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 46,
+    "fragentext": "Which of the following files, located in the user home directory, is used to store the Bash history?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": ".bash_history", "pruefung": true},
+      { "id": 2, "antworttext": ".bash_histfile", "pruefung": false},
+      { "id": 3, "antworttext": ".history", "pruefung": false},
+      { "id": 4, "antworttext": ".bashrc_history", "pruefung": false},
+      { "id": 5, "antworttext": ".history_bash", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 47,
+    "fragentext": "Which Bash environment variable defines in which file the user history is stored when exiting a Bash process? (Specify ONLY the variable name.)",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "HISTFILE", "pruefung": true }
+    ],
+    "typ": "fi"
+  },
+  {
+    "id": 48,
+    "fragentext": "Which of the following commands displays the contents of a gzip compressed tar archive?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "gzip archive.tgz | tar xvf -", "pruefung": false},
+      { "id": 2, "antworttext": "tar ztf archive.tgz", "pruefung": true},
+      { "id": 3, "antworttext": "gzip -d archive.tgz | tar tvf -", "pruefung": false},
+      { "id": 4, "antworttext": "tar cf archive.tgz", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 49,
+    "fragentext": "Which grep command will print only the lines that do not end with a / in the file foo?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "grep '/$' foo", "pruefung": false},
+      { "id": 2, "antworttext": "grep '/#' foo", "pruefung": false},
+      { "id": 3, "antworttext": "grep -v '/$' foo", "pruefung": true},
+      { "id": 4, "antworttext": "grep -v '/#' foo", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 50,
+    "fragentext": "Which of the following commands is used to change options and positional parameters for a running Bash?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "history", "pruefung": false},
+      { "id": 2, "antworttext": "set", "pruefung": true},
+      { "id": 3, "antworttext": "bashconf", "pruefung": false},
+      { "id": 4, "antworttext": "setsh", "pruefung": false},
+      { "id": 5, "antworttext": "envsetup", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 51,
+    "fragentext": "Which of the following commands replaces each occurrence of 'bob' in the file letter with 'Bob' and writes the result to the file newletter?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "sed '/bob/Bob' letter > newletter", "pruefung": false},
+      { "id": 2, "antworttext": "sed s/bob/Bob/ letter < newletter", "pruefung": false},
+      { "id": 3, "antworttext": "sed 's/bob/Bob' letter > newletter", "pruefung": false},
+      { "id": 4, "antworttext": "sed 's/bob/Bob/g' letter > newletter", "pruefung": true},
+      { "id": 5, "antworttext": "sed 's/bob, Bob/' letter > newletter", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 52,
+    "fragentext": "From a Bash shell, which of the following commands directly executes the instruction from the file /usr/local/bin/runme.sh without starting a subshell? (Please select TWO answers.)",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "source /usr/local/bin/runme.sh", "pruefung": true},
+      { "id": 2, "antworttext": ". /usr/local/bin/runme.sh", "pruefung": true},
+      { "id": 3, "antworttext": "/bin/bash /usr/local/bin/runme.sh", "pruefung": false},
+      { "id": 4, "antworttext": "/usr/local/bin/runme.sh", "pruefung": false},
+      { "id": 5, "antworttext": "run /usr/local/bin/runme.sh", "pruefung": false}
+    ],
+    "typ": "mc"
+  },
+  {
+    "id": 53,
+    "fragentext": "Regarding the command: nice -5 /usr/bin/prog Which of the following statements is correct?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "/usr/bin/prog is executed with a nice level of -5.", "pruefung": false},
+      { "id": 2, "antworttext": "/usr/bin/prog is executed with a nice level of 5.", "pruefung": true},
+      { "id": 3, "antworttext": "/usr/bin/prog is executed with a priority of -5.", "pruefung": false},
+      { "id": 4, "antworttext": "/usr/bin/prog is executed with a priority of 5.", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 54,
+    "fragentext": "Which shell command is used to continue background execution of a suspended command?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "&", "pruefung": false},
+      { "id": 2, "antworttext": "bg", "pruefung": true},
+      { "id": 3, "antworttext": "cont", "pruefung": false},
+      { "id": 4, "antworttext": "exec", "pruefung": false},
+      { "id": 5, "antworttext": ":&", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 55,
+    "fragentext": "Which of the following shell redirections will write standard output and standard error output to a file named filename?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "2>&1 >filename", "pruefung": false},
+      { "id": 2, "antworttext": ">filename 2>&1", "pruefung": true},
+      { "id": 3, "antworttext": "1>&2>filename", "pruefung": false},
+      { "id": 4, "antworttext": ">>filename", "pruefung": false},
+      { "id": 5, "antworttext": "1&2>filename", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 56,
+    "fragentext": "In the vi editor, which of the following commands will copy the current line into the vi buffer?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "c", "pruefung": false},
+      { "id": 2, "antworttext": "cc", "pruefung": false},
+      { "id": 3, "antworttext": "1c", "pruefung": false},
+      { "id": 4, "antworttext": "yy", "pruefung": true},
+      { "id": 5, "antworttext": "1y", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 57,
+    "fragentext": "Which of the following sequences in the vi editor saves the opened document and exits the editor? (Choose TWO correct answers.)",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "esc ZZ", "pruefung": true},
+      { "id": 2, "antworttext": "ctrl :w!", "pruefung": false},
+      { "id": 3, "antworttext": "esc zz", "pruefung": false},
+      { "id": 4, "antworttext": "esc :wq!", "pruefung": true},
+      { "id": 5, "antworttext": "ctrl XX", "pruefung": false}
+    ],
+    "typ": "mc"
+  },
+  {
+    "id": 58,
+    "fragentext": "When starting a program with the nice command without any additional parameters, which nice level is set for the resulting process?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "-10", "pruefung": false},
+      { "id": 2, "antworttext": "0", "pruefung": false},
+      { "id": 3, "antworttext": "10", "pruefung": true},
+      { "id": 4, "antworttext": "20", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 59,
+    "fragentext": "Which of the following commands will reduce all consecutive spaces down to a single space?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "tr 's' ' ' < a.txt > b.txt", "pruefung": false},
+      { "id": 2, "antworttext": "tr -c ' ' < a.txt > b.txt", "pruefung": false},
+      { "id": 3, "antworttext": "tr -d ' ' < a.txt > b.txt", "pruefung": false},
+      { "id": 4, "antworttext": "tr -r ' ' 'n' < a.txt > b.txt", "pruefung": false},
+      { "id": 5, "antworttext": "tr -s ' ' < a.txt > b.txt", "pruefung": true}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 60,
+    "fragentext": "Which character, added to the end of a command, runs that command in the background as a child process of the current shell?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "!", "pruefung": false},
+      { "id": 2, "antworttext": "+", "pruefung": false},
+      { "id": 3, "antworttext": "&", "pruefung": true},
+      { "id": 4, "antworttext": "%", "pruefung": false},
+      { "id": 5, "antworttext": "#", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 61,
+    "fragentext": "Which of the following commands will print the last 10 lines of a text file to the standard output?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "cat -n 10 filename", "pruefung": false},
+      { "id": 2, "antworttext": "dump -n 10 filename", "pruefung": false},
+      { "id": 3, "antworttext": "head -n 10 filename", "pruefung": false},
+      { "id": 4, "antworttext": "tail -n 10 filename", "pruefung": true}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 62,
+    "fragentext": "Which of the following commands prints a list of usernames (first column) and their primary group (fourth column) from the /etc/passwd file?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "fmt -f 1,4 /etc/passwd", "pruefung": false},
+      { "id": 2, "antworttext": "split -c 1,4 /etc/passwd", "pruefung": false},
+      { "id": 3, "antworttext": "cut -d : -f 1,4 /etc/passwd", "pruefung": true},
+      { "id": 4, "antworttext": "paste -f 1,4 /etc/passwd", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 63,
+    "fragentext": "Which of the following signals is sent to a process when the key combination CTRL+C is pressed on the keyboard?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "SIGTERM", "pruefung": false},
+      { "id": 2, "antworttext": "SIGINT", "pruefung": true},
+      { "id": 3, "antworttext": "SIGSTOP", "pruefung": false},
+      { "id": 4, "antworttext": "SIGKILL", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 64,
+    "fragentext": "What happens after issuing the command vi without any additional parameters?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "vi starts and loads the last file used and moves the cursor to the position where vi was when it last exited.", "pruefung": false},
+      { "id": 2, "antworttext": "vi starts and requires the user to explicitly either create a new or load an existing file.", "pruefung": false},
+      { "id": 3, "antworttext": "vi exits with an error message as it cannot be invoked without a file name to operate on.", "pruefung": false},
+      { "id": 4, "antworttext": "vi starts in command mode and opens a new empty file.", "pruefung": true},
+      { "id": 5, "antworttext": "vi starts and opens a new file which is filled with the content of the vi buffer if the buffer contains text.", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 65,
+    "fragentext": "Which of the following command sets the Bash variable named TEST with the content FOO?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "set TEST=\"FOO\"", "pruefung": false},
+      { "id": 2, "antworttext": "TEST = \"FOO\"", "pruefung": false},
+      { "id": 3, "antworttext": "var TEST=\"FOO\"", "pruefung": false},
+      { "id": 4, "antworttext": "TEST=\"FOO\"", "pruefung": true}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 66,
+    "fragentext": "Which variable defines the directories in which a Bash shell searches for executable commands?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "BASHEXEC", "pruefung": false},
+      { "id": 2, "antworttext": "BASHRC", "pruefung": false},
+      { "id": 3, "antworttext": "PATH", "pruefung": true},
+      { "id": 4, "antworttext": "EXECPATH", "pruefung": false},
+      { "id": 5, "antworttext": "PATHRC", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 67,
+    "fragentext": "Which of the following commands determines the type of a file by using a definition database file which contains information about all common file types?",
+    "hinweis": "GNU and Unix Commands",
+    "antwort": [
+      { "id": 1, "antworttext": "magic", "pruefung": false},
+      { "id": 2, "antworttext": "type", "pruefung": false},
+      { "id": 3, "antworttext": "file", "pruefung": true},
+      { "id": 4, "antworttext": "pmagic", "pruefung": false},
+      { "id": 5, "antworttext": "hash", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 68,
+    "fragentext": "Which of the following commands can be used to search for the executable file foo when it has been placed in a directory not included in $PATH?",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "apropos", "pruefung": false},
+      { "id": 2, "antworttext": "which", "pruefung": false},
+      { "id": 3, "antworttext": "find", "pruefung": true},
+      { "id": 4, "antworttext": "query", "pruefung": false},
+      { "id": 5, "antworttext": "whereis", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 69,
+    "fragentext": "What does the command mount -a do?",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "It ensures that all file systems listed with the option noauto in /etc/fstab are mounted.", "pruefung": false},
+      { "id": 2, "antworttext": "It shows all mounted file systems that have been automatically mounted.", "pruefung": false},
+      { "id": 3, "antworttext": "It opens an editor with root privileges and loads /etc/fstab for editing.", "pruefung": false},
+      { "id": 4, "antworttext": "It ensures that all file systems listed with the option auto in /etc/fstab are mounted.", "pruefung": true},
+      { "id": 5, "antworttext": "It ensures that all file systems listed in /etc/fstab are mounted regardless of their options.", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 70,
+    "fragentext": "Which of the following settings for umask ensures that new files have the default permissions -rw-r----- ?",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "0017", "pruefung": false},
+      { "id": 2, "antworttext": "0640", "pruefung": false},
+      { "id": 3, "antworttext": "0038", "pruefung": false},
+      { "id": 4, "antworttext": "0027", "pruefung": true}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 71,
+    "fragentext": "Which of the following is the device file name for the second partition on the only SCSI drive?",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "/dev/hda1", "pruefung": false},
+      { "id": 2, "antworttext": "/dev/sda2", "pruefung": true},
+      { "id": 3, "antworttext": "/dev/sd0a2", "pruefung": false},
+      { "id": 4, "antworttext": "/dev/sd1p2", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 72,
+    "fragentext": "In order to display all currently mounted filesystems, which of the following commands could be used? (Choose TWO correct answers.)",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "cat /proc/self/mounts", "pruefung": true},
+      { "id": 2, "antworttext": "free", "pruefung": false},
+      { "id": 3, "antworttext": "mount", "pruefung": true},
+      { "id": 4, "antworttext": "lsmounts", "pruefung": false},
+      { "id": 5, "antworttext": "cat /proc/filesystems", "pruefung": false}
+    ],
+    "typ": "mc"
+  },
+  {
+    "id": 73,
+    "fragentext": "Which of the following commands can be used to locate programs and their corresponding man pages and configuration files?",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "dirname", "pruefung": false},
+      { "id": 2, "antworttext": "which", "pruefung": false},
+      { "id": 3, "antworttext": "basename", "pruefung": false},
+      { "id": 4, "antworttext": "query", "pruefung": false},
+      { "id": 5, "antworttext": "whereis", "pruefung": true}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 74,
+    "fragentext": "Which of the following commands changes the number of days before the ext3 filesystem on /dev/sda1 has to run through a full filesystem check while booting?",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "tune2fs -d 200 /dev/sda1", "pruefung": false},
+      { "id": 2, "antworttext": "tune2fs -c 200 /dev/sda1", "pruefung": false},
+      { "id": 3, "antworttext": "tune2fs -i 200 /dev/sda1", "pruefung": true},
+      { "id": 4, "antworttext": "tune2fs -n 200 /dev/sda1", "pruefung": false},
+      { "id": 5, "antworttext": "tune2fs --days 200 /dev/sda1", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 75,
+    "fragentext": "Which type of filesystem is created by mkfs when it is executed with the block device name only and without any additional parameters?",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "ext2", "pruefung": true},
+      { "id": 2, "antworttext": "ext3", "pruefung": false},
+      { "id": 3, "antworttext": "ext4", "pruefung": false},
+      { "id": 4, "antworttext": "XFS", "pruefung": false},
+      { "id": 5, "antworttext": "VFAT", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 76,
+    "fragentext": "How many fields are in a syntactically correct line of /etc/fstab?",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "3", "pruefung": false},
+      { "id": 2, "antworttext": "4", "pruefung": false},
+      { "id": 3, "antworttext": "5", "pruefung": false},
+      { "id": 4, "antworttext": "6", "pruefung": true},
+      { "id": 5, "antworttext": "7", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 77,
+    "fragentext": "Which command is used to create and initialize the files used to store quota information? (Specify ONLY the command without any path or parameters.)",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "quotacheck", "pruefung": true }
+    ],
+    "typ": "fi"
+  },
+  {
+    "id": 78,
+    "fragentext": "Which of the following file permissions belong to a symbolic link?",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "-rwxrwxrwx", "pruefung": false},
+      { "id": 2, "antworttext": "+rwxrwxrwx", "pruefung": false},
+      { "id": 3, "antworttext": "lrwxrwxrwx", "pruefung": true},
+      { "id": 4, "antworttext": "srwxrwxrwx", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 79,
+    "fragentext": "Creating a hard link to an ordinary file returns an error. What could be the reason for this?",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "The source file is hidden.", "pruefung": false},
+      { "id": 2, "antworttext": "The source file is read-only.", "pruefung": false},
+      { "id": 3, "antworttext": "The source file is a shell script.", "pruefung": false},
+      { "id": 4, "antworttext": "The source file is already a hard link.", "pruefung": false},
+      { "id": 5, "antworttext": "The source and the target are on different filesystems.", "pruefung": true}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 80,
+    "fragentext": "Which of the following commands creates an ext3 filesystem on /dev/sdb1? (Choose TWO correct answers.)",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "/sbin/mke2fs -j /dev/sdb1", "pruefung": true},
+      { "id": 2, "antworttext": "/sbin/mkfs -t ext3 /dev/sdb1", "pruefung": true},
+      { "id": 3, "antworttext": "/sbin/mkfs -c ext3 /dev/sdb1", "pruefung": false},
+      { "id": 4, "antworttext": "/sbin/mke3fs -j /dev/sdb1", "pruefung": false}
+    ],
+    "typ": "mc"
+  },
+  {
+    "id": 81,
+    "fragentext": "Which of the following commands will change the quota for a specific user?",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "edquota", "pruefung": true},
+      { "id": 2, "antworttext": "repquota", "pruefung": false},
+      { "id": 3, "antworttext": "quota -e", "pruefung": false},
+      { "id": 4, "antworttext": "quota", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 82,
+    "fragentext": "Which utility would be used to change how often a filesystem check is performed on an ext2 filesystem without losing any data stored on that filesystem?",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "mod2fs", "pruefung": false},
+      { "id": 2, "antworttext": "fsck", "pruefung": false},
+      { "id": 3, "antworttext": "tune2fs", "pruefung": true},
+      { "id": 4, "antworttext": "mke2fs", "pruefung": false},
+      { "id": 5, "antworttext": "fixe2fs", "pruefung": false}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 83,
+    "fragentext": "Which of the following Linux filesystems preallocates a fixed number of inodes at the filesystem's make/ creation time and does NOT generate them as needed? (Choose TWO correct answers.)",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "ext3", "pruefung": true},
+      { "id": 2, "antworttext": "JFS", "pruefung": false},
+      { "id": 3, "antworttext": "ext2", "pruefung": true},
+      { "id": 4, "antworttext": "XFS", "pruefung": false},
+      { "id": 5, "antworttext": "procfs", "pruefung": false}
+    ],
+    "typ": "mc"
+  },
+  {
+    "id": 84,
+    "fragentext": "What is the purpose of the Filesystem Hierarchy Standard?",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "It is a security model used to ensure files are organized according to their permissions and accessibility.", "pruefung": false},
+      { "id": 2, "antworttext": "It provides unified tools to create, maintain and manage multiple filesystems in a common way.", "pruefung": false},
+      { "id": 3, "antworttext": "It defines a common internal structure of inodes for all compliant filesystems.", "pruefung": false},
+      { "id": 4, "antworttext": "It is a distribution neutral description of locations of files and directories.", "pruefung": true}
+    ],
+    "typ": "sc"
+  },
+  {
+    "id": 85,
+    "fragentext": "Which umask value will result in the default access permissions of 600 (rw-------) for files and 700 (rwx------) for directories? (Specify only the numerical umask value.)",
+    "hinweis": "Devices, Linux Filesystems, Filesystem Hierachy Standard",
+    "antwort": [
+      { "id": 1, "antworttext": "0077", "pruefung": true },
+      { "id": 2, "antworttext": "077", "pruefung": true }
+    ],
+    "typ": "fi"
+  }
+]

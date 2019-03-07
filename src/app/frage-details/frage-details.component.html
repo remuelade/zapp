@@ -1,0 +1,212 @@
+<h2 class="ui header">Frage: {{ frage.id }} - {{ frage.fragentext }}</h2>
+<div class="ui grid">
+  <div class="mobile tablet only three wide column" (click)="zurueck()" routerLink="/fragen/{{frage.id-1}}">
+    <i class="big left grey arrow icon" *ngIf="frage.first"></i>
+  </div>
+
+  <!--FORMULARE-->
+  <div class="ten wide mobile sixteen wide computer ten wide tablet column">
+    <div class="six wide column" style="text-align:right">
+      <i *ngIf="frage.antwort[0]" class="graduation cap icon grey"></i>{{ zfalsch + zrichtig }} |
+      <i *ngIf="frage.antwort[0]" class="check circle icon green"></i>{{ zrichtig }} |
+      <i *ngIf="frage.antwort[0]" class="times circle icon red"></i>{{ zfalsch }} |
+      <i *ngIf="frage.antwort[0]" class="chart line icon blue"></i>{{ zview }} |
+      <i *ngIf="frage.antwort[0]" class="small calculator icon black"></i>{{ prozent | number:'1.0' }}%
+      <i *ngIf="frage.antwort[0]" (click)="statsfkt()" class="big info circle icon black link"></i>
+    </div>
+    <!-- MULTI-->
+    <div *ngIf="frage.typ==='mc'">
+      <form [formGroup]="multiForm">
+        <h3 class="ui header">Bitte wählen Sie Ihre Antworten</h3>
+        <div formArrayName="antwortArray">
+          <div class="ui form" *ngFor="let a of frage.antwort; index as i">
+            <div class="inline field"></div>
+            <span *ngIf="aufgedeckt && a.pruefung">
+              <i *ngIf="frage.antwort[0]" class="check circle icon green"></i>
+            </span>
+            <span *ngIf="!a.pruefung && aufgedeckt">
+              <i *ngIf="frage.antwort[0]" class="times circle icon red"></i>
+            </span>
+            <div class="ui checkbox">
+              <input [formControlName]="i" type="checkbox" tabindex="0" [id]="i">
+              <label [for]="i">{{a.antworttext}}</label>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!--ENDE-MULTI -->
+
+    <!--SINGLE-->
+    <div *ngIf="frage.typ==='sc'">
+      <form [formGroup]="singleForm">
+        <h3 class="ui header">Bitte wählen Sie Ihre Antwort</h3>
+        <div class="grouped fields">
+          <div class="inline field">
+            <div class="ui form" *ngFor="let a of frage.antwort; index as i">
+              <div class="field">
+                <span *ngIf="aufgedeckt && a.pruefung">
+                  <i *ngIf="frage.antwort[0]" class="check circle icon green"></i>
+                </span>
+                <span *ngIf="!a.pruefung && aufgedeckt">
+                  <i *ngIf="frage.antwort[0]" class="times circle icon red"></i>
+                </span>
+                <div class="ui radio checkbox">
+                  <input type="radio" name="antname" formControlName="antname" tabindex="0" class="hidden" [id]="i"
+                    [value]="i">
+                  <label [for]="i">{{a.antworttext}}</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!--ENDE-SINGLE-->
+
+    <!--FILL-IN-->
+    <div *ngIf="frage.typ==='fi'">
+      <form [formGroup]="fillinForm">
+        <h3 class="ui header">Bitte geben Sie Ihre Antwort ein</h3>
+        <div class="ui form">
+          <div class="field">
+            <input formControlName="textfeld" name="tf12" type="text" (keyup.enter)="pruefen()" autofocus>
+          </div>
+        </div>
+      </form>
+      <!--EINBLENDUNG LÖSUNG-->
+      <div class="item" style="text-align:center" *ngIf="aufgedecktfi">
+
+        <br>
+        <div class="ui green horizontal icon label">
+          <i class="middle check circle icon"></i>LÖSUNG</div>
+        Die richtige(n) Antwort(en) lautet/lauten: <br>
+        <div *ngFor="let a of frage.antwort; index as i"><b>{{a.antworttext}}</b></div>
+      </div>
+      <!--ENDE EINBLENDUNG LÖSUNG-->
+    </div>
+    <!--ENDE-FILL-IN-->
+
+    <!--ENDE-FORMULARE-->
+  </div>
+
+  <div class="mobile tablet only three wide column" *ngIf="frage.last" style="text-align: right" (click)="weiter()"
+    routerLink="/fragen/{{frage.id+1}}">
+    <i class="big right grey arrow icon"></i>
+  </div>
+  <div class="mobile tablet only three wide column" *ngIf="!frage.last" style="text-align: right" 
+    routerLink="/fragen/">
+    <i class="big undo grey arrow icon"></i>
+  </div>
+
+</div>
+
+<!----------------------BUTTONS START----------------------------------->
+<br><br>
+<div class="ui grid" style="text-align:center">
+
+  <div class="computer only three wide column" id="mittigid">
+    <div *ngIf="frage.first">
+      <button class="ui tiny labeled icon button" (click)="zurueck()" routerLink="/fragen/{{frage.id-1}}">
+        <i class="left arrow icon"></i>
+        ZURÜCK
+      </button>
+    </div>
+  </div>
+
+  <div class="sixteen wide mobile sixteen wide tablet ten wide computer wide column">
+    <button class="ui tiny green labeled icon button" (click)="aufdecken()"
+      [class.disabled]="multiForm.dirty || singleForm.dirty || fillinForm.dirty">
+      <i class="graduation cap icon"></i>
+      LERNEN
+    </button>
+
+    <!-- <button class="ui tiny orange labeled icon button" (click)="hinweisbutton()">
+      <i class="question circle icon"></i>
+      HINWEIS
+    </button> -->
+
+    <button class="ui tiny red right labeled icon button" (click)="pruefen()"
+      [class.disabled]="aufgedeckt || aufgedecktfi || !(multiForm.dirty || singleForm.dirty || fillinForm.dirty)">
+      <i class="attention icon"></i>
+      PRÜFEN
+    </button>
+  </div>
+
+  <div class="computer only three wide column" id="mittigid">
+    <div *ngIf="frage.last">
+      <button class="ui tiny right labeled icon button" (click)="weiter()" routerLink="/fragen/{{frage.id+1}}">
+        <i class="right arrow icon"></i>
+        WEITER
+      </button>
+    </div>
+
+    <div *ngIf="!frage.last">
+      <button class="ui red tiny right labeled icon button" routerLink="/fragen/">
+        <i class="right arrow icon"></i>
+        ZURÜCK ZUR LISTE
+      </button>
+    </div>
+
+  </div>
+</div>
+<!----------------------BUTTONS ENDE------------------------------------>
+
+<!--Flexible-AUSGABE-->
+<br>
+<div class="item" style="text-align:center" *ngIf="hinweis">
+  <div class="ui orange horizontal icon label">
+    <i class="question circle icon"></i>HINWEIS</div>
+  {{ frage.hinweis }} <br><br>
+</div>
+
+<div class="item" style="text-align:center" *ngIf="richtig">
+  <div class="ui green horizontal icon label">
+    <i class="middle check circle icon"></i>SUPER</div>
+  Das war richtig! Weiter so!
+</div>
+
+
+<!-- FORTSCHRITTSBALKEN -->
+<div class="ui indicating progress" data-value="1" id="example4">
+  <div class="bar">
+    <div class="progress"></div>
+  </div>
+</div>
+<!-- FORTSCHRITTSBALKEN ENDE-->
+
+
+<!-- MODAL -->
+<div class="ui modal">
+  <i class="close icon"></i>
+  <div class="header">
+    INFORMATIONEN
+  </div>
+  <div class="image content">
+    <div class="ui medium image" style="text-align:center">
+      <!-- <img src="../../assets/zapp_logo.png"> -->
+      <i class="massiv info circle icon grey"></i>
+    </div>
+    <div class="description">
+      <h3 class="ui header">Themengebiet der Frage: {{ frage.hinweis }}</h3>
+      <h3 class="ui header">Statistiken:</h3>
+      <i *ngIf="frage.antwort[0]" class="graduation cap icon grey"></i>{{ zfalsch + zrichtig }} - Fragen beantwortet<br>
+      <i *ngIf="frage.antwort[0]" class="check circle icon green"></i>{{ zrichtig }} - Fragen richtig beantwortet <br>
+      <i *ngIf="frage.antwort[0]" class="times circle icon red"></i>{{ zfalsch }} - Fragen falsch beantwortet<br>
+      <i *ngIf="frage.antwort[0]" class="chart line icon blue"></i>{{ zview }} - Fragen gesehen <br>
+      <i *ngIf="frage.antwort[0]" class="calculator icon black"></i>{{ prozent | number:'1.0' }}% - Prozentual richtig
+      <h3 class="ui header">Informationen:</h3>
+      <p>Der <i *ngIf="frage.antwort[0]" class="chart line icon blue"></i>Zähler zählt jede besuchte Frage. Auch
+        wiederholte. Für 100% richtige Antworten müssen diese erneut beantwortet werden. Übersprungene Fragen werden als
+        Fehler gewertet. Ein Neustart setzt alle Zähler
+        zurück.</p>
+    </div>
+  </div>
+  <div class="actions">
+    <div class="ui positive right labeled icon button">
+      OK
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</div>
+<!-- MODAL ENDE -->

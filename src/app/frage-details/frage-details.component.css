@@ -1,0 +1,46 @@
+
+#mittigid {
+    display: flex;
+    justify-content: center;
+}
+
+#progressbar {
+    background: rgb(0, 0, 0);
+    border-radius: 13px;
+    height: 20px;
+    width: 250px;
+    padding: 3px;
+}
+
+#progressbar:after {
+    content: '';
+    display: block;
+    background: #DB2828;
+    width: 60%;
+    height: 100%;
+    border-radius: 9px;
+}
+
+#progressbarcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#transparent {
+    color: #FF000000
+}
+
+#footerfest {
+    position: fixed;
+    padding: 4px;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    /* background-color: red; */
+    /* color: white; */
+    background-color: white;
+    color: black;
+}
